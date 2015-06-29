@@ -12,13 +12,13 @@ print '<!DOCTYPE html>
 <body>';
 
 
-$command = escapeshellcmd('py reddit.py hot ');
+$command = escapeshellcmd('/usr/local/bin/python3.4 /var/www/html/hub/reddit.py hot ');
 $output = shell_exec($command);
-echo $output;
+print $output;
 
-$command = escapeshellcmd('py reddit.py top ');
+$command = escapeshellcmd('/usr/local/bin/python3.4 /var/www/html/hub/reddit.py top ');
 $output = shell_exec($command);
-echo $output;
+print $output;
 
 
 print '</body>';

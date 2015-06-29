@@ -4,7 +4,7 @@ html {
 
 
 
-.reddit_div {
+.content_div {
   width: 300px;
   font-family: arial, helvetica, sans-serif;
   font-size: 13px;
@@ -17,28 +17,28 @@ html {
 
 }
 
-.reddit_div:hover ,.reddit_div.even:hover{
+.content_div:hover ,.content_div.even:hover{
   background-color: rgb(255, 255, 255);
 }
 
-.reddit_div a {
+.content_div a {
   text-decoration: none;
   color: black;
   width: 265px;
   display: inline-block;
 }
 
-.reddit_column {
+.content_column {
 	width: 308px;
 	float: left;
 	margin-right: 8px;
 }
 
-.reddit_div.even {
+.content_div.even {
     background-color: rgb(207, 221, 240);
 }
 
-#reddit_column_info {
+#content_column_info {
   font-family: arial, helvetica, sans-serif;
   font-weight: bold;
   text-align: center;
@@ -51,4 +51,9 @@ html {
   width: 30px;
   float: right;
   display: inline-block;
+}
+
+
+.comment a {
+  border-right: none;
 }

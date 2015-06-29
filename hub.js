@@ -9,6 +9,6 @@ $.ajax({
     }
 });
 
-$(".content_column_info").click(function(event) { 
+$(".content_div").click(function(event) { 
 	console.log("Got data: " + event.target.id);
  });

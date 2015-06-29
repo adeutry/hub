@@ -45,9 +45,9 @@ foreach($results as $i=>$result){
 		print "<div id=\"content_column_info_$i\" class=\"content_column_info\" >/".$boards[$i]."/</div>";
 
 		foreach($result as $key=>$post){
-			print "<div id=\"content_div_$i"."_$key\" class=\"content_div\">";
+			print "<div id=\"content_div_".$post['no']."\" class=\"content_div\">";
 				print "<div class=\"content_subject\">".$post['subject']."</div>";
-				print "<a href=\"http://boards.4chan.org/".$boards[$i]."/thread/".$post['no']."/\">".$post['body']."</a>";
+				print $post['body'];
 				print "<div class=\"score_comments\">";
 					print "<div class=\"score\" >".$post['replies']."</div>"; 
 				print "</div>";

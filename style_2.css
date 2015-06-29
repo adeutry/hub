@@ -4,7 +4,7 @@ html {
 
 
 
-.reddit_div {
+.content_div {
   width: 305px;
   font-family: RobotoDraft, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -19,11 +19,11 @@ html {
   border-color: rgb(224, 221, 221);
 }
 
-.reddit_div:hover ,.reddit_div.even:hover{
+.content_div:hover ,.content_div.even:hover{
   background-color: rgb(230, 241, 249);
 }
 
-.reddit_div a {
+.content_div a {
   text-decoration: none;
     color: rgb(69, 69, 69);
   width: 265px;
@@ -34,7 +34,7 @@ html {
 
 }
 
-.reddit_column {
+.content_column {
 	width: 313px;
 	float: left;
 	margin-right: 8px;
@@ -44,7 +44,7 @@ html {
 
 
 
-#reddit_column_info {
+.content_column_info {
   font-family: RobotoDraft ,arial, helvetica, sans-serif;
   font-weight: bold;
   text-align: center;

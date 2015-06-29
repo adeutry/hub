@@ -45,7 +45,7 @@ def update_4chan_by_board (board):
             no =  str(thread['no'])            
             
             i+=1    
-            sql = "INSERT INTO `4chan_" + board + "` (`id`,`subject`,`body`,`replies`,`no`) VALUES ('" + str(i) +"','" + sub +"','" + com + "','" + replies +"','" + no + "') ON DUPLICATE KEY UPDATE subject='" + sub +"', body='" + com + "'"
+            sql = "INSERT INTO `4chan_" + board + "` (`id`,`subject`,`body`,`replies`,`no`) VALUES ('" + str(i) +"','" + sub +"','" + com + "','" + replies +"','" + no + "') ON DUPLICATE KEY UPDATE subject='" + sub +"', body='" + com + "', subject='" + sub + "', no='" + no + "', replies='" + replies + "'"  
             print(sql + '\n')           
             cur.execute(sql)
          

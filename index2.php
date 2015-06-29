@@ -5,7 +5,7 @@ $username = "root";
 $password = "password";
 $dbname =   "hub";
 
-$boards = array("mu","pol","lit","v");
+$boards = array("mu","g","lit","v");
 
 
 try {
@@ -34,6 +34,7 @@ print '<!DOCTYPE html>
 <title>Ayy</title>
 <link rel="stylesheet" type="text/css" href="style_2.css">
 <link href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="jquery-2.1.4.min.js"></script>
 <link href="http://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" type="text/css">
 </head>
 
@@ -58,7 +59,7 @@ foreach($results as $i=>$result){
 
 
 
-print '</body></html>';
+print '<script language="javascript" type="text/javascript" src="hub.js"></script></body></html>';
 
 	  }
 catch(PDOException $e)

@@ -45,12 +45,15 @@ foreach($results as $i=>$result){
 		print "<div id=\"content_column_info_$i\" class=\"content_column_info\" >/".$boards[$i]."/</div>";
 
 		foreach($result as $key=>$post){
-			print "<div id=\"content_div_".$post['no']."\" class=\"content_div\">";
-				print "<div class=\"content_subject\">".$post['subject']."</div>";
-				print $post['body'];
-				print "<div class=\"score_comments\">";
-					print "<div class=\"score\" >".$post['replies']."</div>"; 
+			print "<div id=\"content_div_".$i."_".$boards[$i]."_".$post['no']."\" class=\"content_div\">";
+				print "<div class=\"content_subject\">";
+					if(strlen($post['subject'])>0){
+						print "<div class=\"subject\">".$post['subject']."</div>";
+					}
+					print "<div class=\"replies\">".$post['replies']."</div>";
 				print "</div>";
+				print $post['body'];
+			
 			print "</div>";
 		}
 

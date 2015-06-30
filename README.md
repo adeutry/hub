@@ -1,3 +1,2 @@
 # hub
-Web hub for displaying posts from several different online websites and forums
-Something
+Web hub for displaying posts from different online websites and forums in one page.

@@ -4,7 +4,7 @@ html {
 
 
 
-.content_div {
+.content_div, .reply_div {
   width: 305px;
   min-height: 20px;
   font-family: RobotoDraft, arial, helvetica, sans-serif;
@@ -24,7 +24,7 @@ html {
   background-color: rgb(230, 241, 249);
 }
 
-.content_div a {
+.content_div a, .reply_div a {
   text-decoration: none;
     color: rgb(69, 69, 69);
   width: 265px;
@@ -33,7 +33,11 @@ html {
 
 }
 
-.content_column {
+.reply_div {
+    background: #F2F0D5;
+}
+
+.content_column, .thread_column {
 	width: 313px;
 	float: left;
 	margin-right: 8px;

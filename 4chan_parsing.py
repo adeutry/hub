@@ -11,7 +11,7 @@ import time
 
 
 #array of boards to monitor
-boards = ['mu','lit','v','g']
+boards = ['mu','lit','v','g','sci']
 
 #connect to database
 db = MySQLdb.connect(host="localhost", user="root",passwd="password",db="hub", charset="utf8")
@@ -44,9 +44,11 @@ def update_4chan_by_board (board):
             replies = str(thread['replies'])
             no =  str(thread['no'])            
             
-            i+=1    
-            sql = "INSERT INTO `4chan_" + board + "` (`id`,`subject`,`body`,`replies`,`no`) VALUES ('" + str(i) +"','" + sub +"','" + com + "','" + replies +"','" + no + "') ON DUPLICATE KEY UPDATE subject='" + sub +"', body='" + com + "', subject='" + sub + "', no='" + no + "', replies='" + replies + "'"  
-            print(sql + '\n')           
+            i+=1  
+            #replacing single quotes with double quotes so sql is happy 
+            com = com.replace("'",'"')  
+            sql = "INSERT INTO `4chan_" + board + "` (`id`,`subject`,`body`,`replies`,`no`) VALUES ('" + str(i) +"','" + sub +"','" + com + "','" + replies +"','" + no + "') ON DUPLICATE KEY UPDATE subject='" + sub +"', body='" + com + "', subject='" + sub + "', no='" + no + "', replies='" + replies + "'"            
+            print(sql)
             cur.execute(sql)
          
 
@@ -55,6 +57,7 @@ while True:
     for board in boards:
         update_4chan_by_board(board)
         db.commit()
+        print("updated table 4chan_" + board) 
         time.sleep(5)
 
         
